@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same-Day Delivery | KGL Express</title>
+    <meta name="description" content="Fast and reliable same-day delivery services in Kano. Get your packages delivered on the same day with real-time tracking.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="alternate icon" href="/images/favicon.ico">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(13, 110, 253, 0.8)), url('/images/same-day-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .feature-icon i {
+            font-size: 24px;
+            color: #0d6efd;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div id="header-component"></div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-3">Same-Day Delivery</h1>
+                    <p class="lead mb-4">Get your packages delivered on the same day within Kano metropolis. Fast, reliable, and trackable.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="/pages/contact/index.html" class="btn btn-light btn-lg px-4">
+                            <i class="fas fa-paper-plane me-2"></i> Get a Quote
+                        </a>
+                        <a href="tel:+2348000000000" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-phone-alt me-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-4">Fast & Reliable Same-Day Delivery</h2>
+                    <p class="lead text-muted mb-4">Need it there today? We've got you covered. Our same-day delivery service ensures your packages reach their destination quickly and securely.</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Fast Turnaround</h3>
+                                    <p class="text-muted mb-0">Delivery within hours of pickup</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Wide Coverage</h3>
+                                    <p class="text-muted mb-0">Entire Kano metropolis covered</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Secure Handling</h3>
+                                    <p class="text-muted mb-0">Professional and careful couriers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Real-time Updates</h3>
+                                    <p class="text-muted mb-0">Instant notifications</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                        <div class="card-body p-0">
+                            <img src="/images/same-day-delivery.jpg" alt="Same Day Delivery" class="img-fluid w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold">How It Works</h2>
+                <p class="lead text-muted">Get your package delivered the same day in 3 easy steps</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-calendar-check text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 class="h4 mb-3">1. Schedule Pickup</h3>
+                            <p class="text-muted mb-0">Book your same-day delivery before 12 PM for afternoon delivery or before 4 PM for evening delivery.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-truck text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 class="h4 mb-3">2. We Pick Up</h3>
+                            <p class="text-muted mb-0">Our courier will arrive at your specified location to collect the package.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-check-circle text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 class="h4 mb-3">3. Fast Delivery</h3>
+                            <p class="text-muted mb-0">Your package will be delivered to the recipient on the same day with real-time tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-4">Service Areas in Kano</h2>
+                    <p class="lead text-muted mb-4">We cover all major areas in Kano metropolis for same-day deliveries.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h5 mb-3">Metropolitan Areas</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Kano Municipal</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Nasarawa GRA</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Bompai</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Gyadi-Gyadi</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Sabon Gari</li>
+                                        <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Fagge</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="h5 mb-3">Outer Areas</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Hotoro</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Sharada</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Kumbotso</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Rijiyar Zaki</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Tarauni</li>
+                                        <li><i class="fas fa-map-marker-alt text-primary me-2"></i> Kano-Zaria Road</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">Request Same-Day Delivery</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="pickupLocation" class="form-label">Pickup Location</label>
+                                    <input type="text" class="form-control" id="pickupLocation" placeholder="Enter pickup address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="deliveryLocation" class="form-label">Delivery Location</label>
+                                    <input type="text" class="form-control" id="deliveryLocation" placeholder="Enter delivery address" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pickupTime" class="form-label">Preferred Pickup Time</label>
+                                        <select class="form-select" id="pickupTime" required>
+                                            <option value="">Select time</option>
+                                            <option value="9am-12pm">Morning (9 AM - 12 PM)</option>
+                                            <option value="12pm-3pm">Afternoon (12 PM - 3 PM)</option>
+                                            <option value="3pm-6pm">Evening (3 PM - 6 PM)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="packageType" class="form-label">Package Type</label>
+                                        <select class="form-select" id="packageType" required>
+                                            <option value="">Select type</option>
+                                            <option value="document">Document</option>
+                                            <option value="small">Small Package (< 5kg)</option>
+                                            <option value="medium">Medium Package (5-15kg)</option>
+                                            <option value="large">Large Package (>15kg)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="specialInstructions" class="form-label">Special Instructions</label>
+                                    <textarea class="form-control" id="specialInstructions" rows="2" placeholder="Any special handling instructions?"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-paper-plane me-2"></i> Request Pickup
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-3">Need it there today?</h2>
+                    <p class="lead mb-0">Our same-day delivery service ensures your packages arrive when you need them.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="/pages/contact/index.html" class="btn btn-light btn-lg w-100">
+                        <i class="fas fa-paper-plane me-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Find answers to common questions about our same-day delivery service</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What are your cut-off times for same-day delivery?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>For same-day delivery, we require all requests to be placed before 2:00 PM. Pickups scheduled before 12:00 PM will be delivered by 6:00 PM the same day. Pickups scheduled between 12:00 PM and 2:00 PM will be delivered by 8:00 PM.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What areas in Kano do you cover for same-day delivery?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>We cover all major areas within Kano metropolis including Kano Municipal, Nasarawa GRA, Bompai, Gyadi-Gyadi, Sabon Gari, Fagge, Hotoro, Sharada, Kumbotso, Rijiyar Zaki, Tarauni, and along Kano-Zaria Road. Contact us to confirm if your specific location is within our same-day delivery zone.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What items are not eligible for same-day delivery?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>For safety and legal reasons, we cannot transport the following items: hazardous materials, flammable substances, illegal items, weapons, live animals, perishable food items requiring refrigeration, and any item prohibited by law. If you're unsure about an item, please contact us before booking.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h3 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How can I track my same-day delivery?
+                                </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Once your package is picked up, you'll receive a confirmation email with a tracking number and a link to track your delivery in real-time. You can also track your delivery by logging into your account on our website or mobile app. For additional assistance, you can contact our customer service team.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-component"></div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-lg back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/load-components.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Back to top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Hide preloader when page is loaded
+            window.addEventListener('load', function() {
+                const preloader = document.querySelector('.preloader');
+                if (preloader) {
+                    preloader.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

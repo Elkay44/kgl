@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KGL Express Tracking - Track your shipment in real-time. Fast, secure, and reliable delivery services in Kano and beyond.">
+    <meta name="keywords" content="KGL Express, Package Tracking, Shipment Tracking, Delivery Tracking, Track Order, Track Parcel, Kano Delivery">
+    <meta name="author" content="KGL Express">
+    <meta property="og:title" content="KGL Express - Track Your Shipment">
+    <meta property="og:description" content="Track your package or shipment in real-time with KGL Express's secure tracking system.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:url" content="https://kglexpress.ng/tracking">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#FF6B00">
+    <title>Track Your Shipment - KGL Express</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Fonts & CSS Libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components.css">
+</head>
+<body class="d-flex flex-column min-vh-100" data-bs-theme="light">
+    <!-- Preloader -->
+    <div class="preloader" aria-label="Loading...">
+        <div class="preloader-logo">
+            <img src="https://via.placeholder.com/180x60?text=KGL+Express" alt="KGL Express logo" width="180" height="auto">
+            <div class="spinner" aria-hidden="true"></div>
+        </div>
+    </div>
+
+    <div id="alerts-container" aria-live="polite"></div>
+
+    <!-- Header Component (Loaded Dynamically) -->
+    <div id="header-component">
+        <!-- Header will be loaded here -->
+    </div>
+
+    <!-- Tracking Hero Section -->
+    <section class="page-header bg-gradient-primary text-white" id="tracking">
+        <div class="container">
+            <div class="row py-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-2">
+                            <li class="breadcrumb-item"><a href="/" class="text-white-50">Home</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Track Package</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 fw-bold mb-3">Track Your Shipment</h1>
+                    <p class="lead mb-4">Enter your tracking number to get real-time updates on your package's journey.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end" data-aos="fade-left">
+                    <img src="/images/tracking-hero.jpg" alt="Package Tracking" class="img-fluid rounded-4 shadow-lg" width="500">
+                </div>
+            </div>
+        </div>
+        <div class="shape-divider shape-divider-bottom bg-body"></div>
+    </section>
+
+    <!-- Tracking Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <div class="card-body p-4 p-lg-5">
+                            <h2 class="h3 fw-bold mb-4 text-center">Enter Your Tracking Number</h2>
+                            <form id="tracking-form" class="needs-validation" novalidate>
+                                <div class="mb-4">
+                                    <label for="tracking-number" class="form-label">Tracking Number</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-lg" id="tracking-number" placeholder="e.g., KGL123456789" required>
+                                        <button type="submit" class="btn btn-primary btn-lg px-4">
+                                            Track
+                                            <i class="fas fa-search ms-2"></i>
+                                        </button>
+                                    </div>
+                                    <div class="form-text">
+                                        Your tracking number can be found on your receipt or confirmation email.
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid tracking number.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Results Section (Initially Hidden) -->
+    <section id="tracking-results" class="py-5 d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tracking-status-container">
+                        <!-- Package Info -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body p-4">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-8">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="badge tracking-status-badge me-2" id="status-badge">In Transit</span>
+                                            <h2 class="h5 fw-bold mb-0" id="tracking-number-display">KGL123456789</h2>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <p class="text-secondary mb-1">Origin</p>
+                                                <p class="fw-medium mb-2" id="origin-display">Lagos, Nigeria</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text-secondary mb-1">Destination</p>
+                                                <p class="fw-medium mb-0" id="destination-display">Abuja, Nigeria</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="text-secondary mb-1">Estimated Delivery</p>
+                                                <p class="fw-medium mb-2" id="est-delivery-display">June 15, 2023</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text-secondary mb-1">Service Type</p>
+                                                <p class="fw-medium mb-0" id="service-display">Standard Delivery</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mt-3 mt-lg-0">
+                                        <div class="package-details border rounded-3 p-3">
+                                            <h3 class="h6 fw-bold mb-3">Package Details</h3>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span class="text-secondary">Weight:</span>
+                                                <span class="fw-medium" id="weight-display">2.5 kg</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span class="text-secondary">Dimensions:</span>
+                                                <span class="fw-medium" id="dimensions-display">30 x 20 x 15 cm</span>
+                                            </div>
+                                            <hr class="my-2">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-secondary">Last Updated:</span>
+                                                <span class="fw-medium" id="last-updated-display">June 11, 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tracking Timeline -->
+                        <div class="tracking-timeline card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-4">Tracking History</h3>
+                                <div class="tracking-timeline-container" id="tracking-timeline">
+                                    <!-- Timeline items will be inserted here by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Information Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold mb-4">How Our Tracking Works</h2>
+                    <p class="lead text-secondary">We've built a comprehensive tracking system to keep you informed every step of the way.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm hover-lift text-center p-4">
+                        <div class="feature-icon-box bg-primary-soft text-primary mx-auto mb-3">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Real-Time Updates</h3>
+                        <p class="text-secondary">Our tracking system provides real-time updates as your package moves through our network.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm hover-lift text-center p-4">
+                        <div class="feature-icon-box bg-primary-soft text-primary mx-auto mb-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Location Tracking</h3>
+                        <p class="text-secondary">Know exactly where your package is with detailed location information at each checkpoint.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm hover-lift text-center p-4">
+                        <div class="feature-icon-box bg-primary-soft text-primary mx-auto mb-3">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Delivery Notifications</h3>
+                        <p class="text-secondary">Receive automatic notifications when your package is out for delivery and when it's been delivered.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <span class="badge bg-primary-soft text-primary mb-3">Frequently Asked Questions</span>
+                        <h2 class="display-6 fw-bold mb-4">Tracking Questions</h2>
+                        <p class="lead text-secondary">Find answers to common questions about our tracking system.</p>
+                    </div>
+
+                    <div class="accordion" id="accordionFAQ">
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    How do I track my package?
+                                </button>
+                            </h3>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>To track your package, simply enter the tracking number provided in your confirmation email or receipt into our tracking form above. Our system will display real-time information about your shipment's status and location.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    How often is tracking information updated?
+                                </button>
+                            </h3>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>Tracking information is updated at each scan point throughout our delivery network. This typically happens multiple times per day as your package moves through our system, with the final scans occurring at delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    What do the different tracking statuses mean?
+                                </button>
+                            </h3>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><strong>Pending:</strong> Your package information has been received but the package has not yet been picked up.</li>
+                                        <li class="mb-2"><strong>Picked Up:</strong> Your package has been collected from the sender.</li>
+                                        <li class="mb-2"><strong>In Transit:</strong> Your package is moving through our delivery network.</li>
+                                        <li class="mb-2"><strong>Out for Delivery:</strong> Your package is on the vehicle for final delivery.</li>
+                                        <li class="mb-2"><strong>Delivered:</strong> Your package has been delivered.</li>
+                                        <li><strong>Exception:</strong> There is an issue with your delivery that needs attention.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Why can't I see my tracking information?
+                                </button>
+                            </h3>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    <p>If you're having trouble viewing your tracking information, it might be due to one of these reasons:</p>
+                                    <ol>
+                                        <li>The tracking number was entered incorrectly</li>
+                                        <li>There is a slight delay in updating our system (try again later)</li>
+                                        <li>Your package was very recently shipped and hasn't been scanned into our system yet</li>
+                                    </ol>
+                                    <p>If you continue to experience issues, please <a href="/contact/" class="text-primary">contact our customer support team</a> for assistance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h2 class="display-6 fw-bold mb-3">Need Help With Your Shipment?</h2>
+                    <p class="lead mb-0">Our customer support team is available to assist you with any questions about your delivery.</p>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <a href="/contact/" class="btn btn-light btn-lg shadow-lg px-4">Contact Support</a>
+                    <a href="tel:+2348000000000" class="btn btn-outline-light btn-lg ms-2 px-4">Call Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component (Loaded Dynamically) -->
+    <div id="footer-component">
+        <!-- Footer will be loaded here -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components.js"></script>
+    <script src="/js/load-components.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Demo tracking functionality using the mock data in main.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const trackingForm = document.getElementById('tracking-form');
+            const trackingResults = document.getElementById('tracking-results');
+            const trackingTimeline = document.getElementById('tracking-timeline');
+
+            trackingForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const trackingNumber = document.getElementById('tracking-number').value.trim();
+                
+                if (trackingNumber) {
+                    // In a real application, you would make an API call here
+                    // For demo purposes, we'll use the mock data from main.js
+                    if (typeof mockTrackingData !== 'undefined' && mockTrackingData[trackingNumber]) {
+                        displayTrackingData(mockTrackingData[trackingNumber]);
+                    } else if (trackingNumber === 'demo' || trackingNumber.toLowerCase() === 'kgl123456789') {
+                        // For demo purposes, allow 'demo' to show sample tracking
+                        const demoData = {
+                            trackingNumber: 'KGL123456789',
+                            status: 'in-transit',
+                            origin: 'Lagos, Nigeria',
+                            destination: 'Abuja, Nigeria',
+                            weight: '2.5 kg',
+                            dimensions: '30 x 20 x 15 cm',
+                            service: 'Standard Delivery',
+                            estimatedDelivery: '2023-06-15',
+                            timeline: [
+                                {
+                                    id: 1,
+                                    status: 'shipped',
+                                    title: 'Shipment Picked Up',
+                                    location: 'Lagos, Nigeria',
+                                    timestamp: '2023-06-10T09:30:00',
+                                    description: 'Your package has been picked up by our courier.'
+                                },
+                                {
+                                    id: 2,
+                                    status: 'in-transit',
+                                    title: 'In Transit',
+                                    location: 'Ibadan, Nigeria',
+                                    timestamp: '2023-06-11T14:15:00',
+                                    description: 'Your package is on its way to the next facility.'
+                                },
+                                {
+                                    id: 3,
+                                    status: 'pending',
+                                    title: 'Out for Delivery',
+                                    location: 'Abuja, Nigeria',
+                                    timestamp: null,
+                                    description: 'Scheduled for delivery today.'
+                                }
+                            ]
+                        };
+                        displayTrackingData(demoData);
+                    } else {
+                        showTrackingError("We couldn't find any shipments with that tracking number. Please check and try again.");
+                    }
+                } else {
+                    showTrackingError("Please enter a tracking number.");
+                }
+            });
+
+            function displayTrackingData(data) {
+                // Display the tracking results section
+                trackingResults.classList.remove('d-none');
+                
+                // Scroll to results
+                trackingResults.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update package details
+                document.getElementById('tracking-number-display').textContent = data.trackingNumber;
+                document.getElementById('origin-display').textContent = data.origin;
+                document.getElementById('destination-display').textContent = data.destination;
+                document.getElementById('weight-display').textContent = data.weight;
+                document.getElementById('dimensions-display').textContent = data.dimensions;
+                document.getElementById('service-display').textContent = data.service;
+                
+                // Format and display dates
+                const estDelivery = new Date(data.estimatedDelivery);
+                document.getElementById('est-delivery-display').textContent = estDelivery.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                
+                const lastUpdate = data.timeline.length > 0 ? new Date(data.timeline[data.timeline.length - 1].timestamp) : new Date();
+                document.getElementById('last-updated-display').textContent = lastUpdate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                
+                // Set status badge
+                const statusBadge = document.getElementById('status-badge');
+                statusBadge.textContent = data.status.charAt(0).toUpperCase() + data.status.slice(1).replace('-', ' ');
+                
+                // Clear previous timeline
+                trackingTimeline.innerHTML = '';
+                
+                // Generate timeline items
+                data.timeline.forEach((item, index) => {
+                    const timelineItem = document.createElement('div');
+                    timelineItem.className = `timeline-item ${index === 0 ? 'first' : ''} ${index === data.timeline.length - 1 ? 'last' : ''}`;
+                    
+                    const itemStatus = item.status === 'shipped' ? 'completed' : 
+                                      item.status === 'in-transit' ? 'active' : 'pending';
+                    
+                    let formattedDate = 'Pending';
+                    let formattedTime = '';
+                    
+                    if (item.timestamp) {
+                        const date = new Date(item.timestamp);
+                        formattedDate = date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                        formattedTime = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+                    }
+                    
+                    timelineItem.innerHTML = `
+                        <div class="timeline-badge ${itemStatus}">
+                            <i class="fas ${item.status === 'shipped' ? 'fa-check' : 
+                                          item.status === 'in-transit' ? 'fa-truck-fast' : 'fa-clock'}"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4 class="h6 mb-0 fw-bold">${item.title}</h4>
+                                <span class="timeline-date">
+                                    ${formattedDate}
+                                    ${formattedTime ? `<span class="text-secondary ms-2">${formattedTime}</span>` : ''}
+                                </span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="mb-1">${item.description}</p>
+                                <p class="text-secondary mb-0"><i class="fas fa-map-marker-alt me-1"></i> ${item.location}</p>
+                            </div>
+                        </div>
+                    `;
+                    
+                    trackingTimeline.appendChild(timelineItem);
+                });
+            }
+
+            function showTrackingError(message) {
+                // Create alert
+                const alertContainer = document.getElementById('alerts-container');
+                const alertElement = document.createElement('div');
+                alertElement.className = 'alert alert-danger alert-dismissible fade show';
+                alertElement.role = 'alert';
+                alertElement.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                
+                alertContainer.appendChild(alertElement);
+                
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alertElement);
+                    bsAlert.close();
+                }, 5000);
+                
+                // Hide results if they were previously shown
+                trackingResults.classList.add('d-none');
+            }
+        });
+    </script>
+</body>
+</html>

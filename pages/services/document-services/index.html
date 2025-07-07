@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Services | KGL Express</title>
+    <meta name="description" content="Secure and reliable document delivery and handling services. We ensure your important documents reach their destination safely and on time.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="alternate icon" href="/images/favicon.ico">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(13, 110, 253, 0.8)), url('/images/document-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .feature-icon i {
+            font-size: 24px;
+            color: #0d6efd;
+        }
+        .service-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .document-type {
+            border-left: 3px solid #0d6efd;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div id="header-component"></div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-3">Document Services</h1>
+                    <p class="lead mb-4">Secure, reliable, and confidential document handling and delivery services for your business.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="/kgl-delivery-website/pages/contact/index.html" class="btn btn-light btn-lg px-4">
+                            <i class="fas fa-paper-plane me-2"></i> Get a Quote
+                        </a>
+                        <a href="tel:+2348000000000" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-phone-alt me-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-4">Secure Document Handling</h2>
+                    <p class="lead text-muted mb-4">We understand the importance of your documents. That's why we provide specialized handling and delivery services to ensure they reach their destination safely and on time.</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Secure Chain of Custody</h3>
+                                    <p class="text-muted mb-0">Documented handling at every step</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-shield"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Background-Checked Couriers</h3>
+                                    <p class="text-muted mb-0">Trusted professionals handling your documents</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-file-signature"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Proof of Delivery</h3>
+                                    <p class="text-muted mb-0">Digital confirmation with recipient signature</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Real-time Updates</h3>
+                                    <p class="text-muted mb-0">Instant notifications at every stage</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                        <div class="card-body p-0">
+                            <img src="/kgl-delivery-website/images/document-services.jpg" alt="Document Handling" class="img-fluid w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Types -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold">Our Document Services</h2>
+                <p class="lead text-muted">Specialized handling for all your document needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-file-contract text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Legal Documents</h3>
+                            </div>
+                            <div class="document-type">
+                                <p class="mb-1">• Court Filings</p>
+                                <p class="mb-1">• Contracts</p>
+                                <p class="mb-1">• Legal Notices</p>
+                                <p class="mb-0">• Affidavits</p>
+                            </div>
+                            <p class="text-muted small">Secure handling with chain of custody documentation for all legal documents.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-briefcase text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Business Documents</h3>
+                            </div>
+                            <div class="document-type">
+                                <p class="mb-1">• Business Proposals</p>
+                                <p class="mb-1">• Financial Reports</p>
+                                <p class="mb-1">• Tender Documents</p>
+                                <p class="mb-0">• Board Papers</p>
+                            </div>
+                            <p class="text-muted small">Confidential handling of sensitive business documents with delivery confirmation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-file-medical text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Medical Records</h3>
+                            </div>
+                            <div class="document-type">
+                                <p class="mb-1">• Patient Records</p>
+                                <p class="mb-1">• Lab Results</p>
+                                <p class="mb-1">• Medical Reports</p>
+                                <p class="mb-0">• Prescriptions</p>
+                            </div>
+                            <p class="text-muted small">HIPAA-compliant handling of sensitive medical documents.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-file-invoice-dollar text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Financial Documents</h3>
+                            </div>
+                            <div class="document-type">
+                                <p class="mb-1">• Bank Documents</p>
+                                <p class="mb-1">• Tax Returns</p>
+                                <p class="mb-1">• Audit Reports</p>
+                                <p class="mb-0">• Financial Statements</p>
+                            </div>
+                            <p class="text-muted small">Secure handling of sensitive financial information with confidentiality agreements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-passport text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Government Documents</h3>
+                            </div>
+                            <div class="document-type">
+                                <p class="mb-1">• Passport Applications</p>
+                                <p class="mb-1">• Visa Documents</p>
+                                <p class="mb-1">• Permits</p>
+                                <p class="mb-0">• Certificates</p>
+                            </div>
+                            <p class="text-muted small">Authorized handling of official government documents with proper documentation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-archive text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Document Storage</h3>
+                            </div>
+                            <div class="document-type">
+                                <p class="mb-1">• Secure Archiving</p>
+                                <p class="mb-1">• Document Retrieval</p>
+                                <p class="mb-1">• Records Management</p>
+                                <p class="mb-0">• Document Shredding</p>
+                            </div>
+                            <p class="text-muted small">Secure, climate-controlled storage with easy retrieval options.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-4">How Our Document Service Works</h2>
+                    <div class="d-flex mb-4">
+                        <div class="me-4">
+                            <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 40px; height: 40px;">1</div>
+                        </div>
+                        <div>
+                            <h3 class="h5">Schedule a Pickup</h3>
+                            <p class="text-muted mb-4">Call us or use our online platform to schedule a document pickup at your convenience.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="me-4">
+                            <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 40px; height: 40px;">2</div>
+                        </div>
+                        <div>
+                            <h3 class="h5">Secure Collection</h3>
+                            <p class="text-muted mb-4">Our background-checked courier will collect your documents with proper documentation.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 40px; height: 40px;">3</div>
+                        </div>
+                        <div>
+                            <h3 class="h5">Track & Confirm</h3>
+                            <p class="text-muted mb-0">Track your document in real-time and receive confirmation upon delivery.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">Request a Document Service</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="+234 800 000 0000" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="service" class="form-label">Service Type</label>
+                                    <select class="form-select" id="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="legal">Legal Documents</option>
+                                        <option value="business">Business Documents</option>
+                                        <option value="medical">Medical Records</option>
+                                        <option value="financial">Financial Documents</option>
+                                        <option value="government">Government Documents</option>
+                                        <option value="storage">Document Storage</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Additional Details</label>
+                                    <textarea class="form-control" id="message" rows="3" placeholder="Tell us about your document service needs"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-paper-plane me-2"></i> Submit Request
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold">Our Security Measures</h2>
+                <p class="lead text-muted">Your documents are protected every step of the way</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-fingerprint text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Secure Chain of Custody</h3>
+                            <p class="text-muted mb-0">Every document is tracked and accounted for at every stage of the delivery process.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-shield-alt text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Background-Checked Staff</h3>
+                            <p class="text-muted mb-0">All our couriers undergo thorough background checks and security clearance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-lock text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Confidentiality Guaranteed</h3>
+                            <p class="text-muted mb-0">Strict confidentiality agreements and secure handling procedures for all documents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-3">Need to send important documents?</h2>
+                    <p class="lead mb-0">Trust our secure document handling services for peace of mind.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="/kgl-delivery-website/pages/contact/index.html" class="btn btn-light btn-lg w-100">
+                        <i class="fas fa-paper-plane me-2"></i> Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-component"></div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-lg back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/load-components.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Back to top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Hide preloader when page is loaded
+            window.addEventListener('load', function() {
+                const preloader = document.querySelector('.preloader');
+                if (preloader) {
+                    preloader.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

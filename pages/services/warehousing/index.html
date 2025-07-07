@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehousing & Fulfillment Services | KGL Express</title>
+    <meta name="description" content="Secure and scalable warehousing solutions with inventory management and order fulfillment services. Optimize your supply chain with our state-of-the-art facilities.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/kgl-delivery-website/images/favicon.svg">
+    <link rel="alternate icon" href="/kgl-delivery-website/images/favicon.ico">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/kgl-delivery-website/css/styles.css">
+    <link rel="stylesheet" href="/kgl-delivery-website/css/components.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(13, 110, 253, 0.8)), url('/kgl-delivery-website/images/warehouse-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .feature-icon i {
+            font-size: 24px;
+            color: #0d6efd;
+        }
+        .warehouse-feature {
+            transition: transform 0.3s ease;
+        }
+        .warehouse-feature:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div id="header-component"></div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-3">Warehousing & Fulfillment</h1>
+                    <p class="lead mb-4">Secure, scalable, and efficient warehousing solutions tailored to your business needs.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="/kgl-delivery-website/pages/contact/index.html" class="btn btn-light btn-lg px-4">
+                            <i class="fas fa-paper-plane me-2"></i> Request a Quote
+                        </a>
+                        <a href="tel:+2348000000000" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-phone-alt me-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-4">Comprehensive Warehousing Solutions</h2>
+                    <p class="lead text-muted mb-4">Our state-of-the-art warehousing facilities are designed to meet the diverse needs of businesses of all sizes. From inventory management to order fulfillment, we've got you covered.</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-warehouse"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Secure Storage</h3>
+                                    <p class="text-muted mb-0">24/7 monitored facilities with advanced security systems</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Inventory Management</h3>
+                                    <p class="text-muted mb-0">Real-time tracking and reporting</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-boxes"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Order Fulfillment</h3>
+                                    <p class="text-muted mb-0">Pick, pack, and ship with precision</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-temperature-low"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5 mb-2">Climate Control</h3>
+                                    <p class="text-muted mb-0">Specialized storage for sensitive items</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                        <div class="card-body p-0">
+                            <img src="/kgl-delivery-website/images/warehouse-interior.jpg" alt="Modern Warehouse Facility" class="img-fluid w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold">Our Warehousing Features</h2>
+                <p class="lead text-muted">Designed to optimize your supply chain and reduce operational costs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 bg-white shadow-sm warehouse-feature">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-shield-alt text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Advanced Security</h3>
+                            </div>
+                            <p class="text-muted mb-0">24/7 CCTV surveillance, biometric access control, and fire protection systems ensure your inventory is always safe and secure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 bg-white shadow-sm warehouse-feature">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-tachometer-alt text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Real-time Tracking</h3>
+                            </div>
+                            <p class="text-muted mb-0">Our advanced WMS provides real-time inventory visibility and tracking for complete peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 bg-white shadow-sm warehouse-feature">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-shipping-fast text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Seamless Integration</h3>
+                            </div>
+                            <p class="text-muted mb-0">Easily integrate with your e-commerce platform or ERP system for automated order processing and inventory updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fulfillment Process -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold">Our Fulfillment Process</h2>
+                <p class="lead text-muted">Streamlined operations for maximum efficiency</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-upload text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h3 class="h5 mb-3">1. Receive</h3>
+                        <p class="text-muted mb-0">We receive and inspect your inventory at our secure facility.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-boxes text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h3 class="h5 mb-3">2. Store</h3>
+                        <p class="text-muted mb-0">Your products are safely stored in our climate-controlled warehouse.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-tasks text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h3 class="h5 mb-3">3. Process</h3>
+                        <p class="text-muted mb-0">Orders are picked, packed, and prepared for shipping.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <div class="bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-truck text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h3 class="h5 mb-3">4. Ship</h3>
+                        <p class="text-muted mb-0">Orders are shipped to your customers with tracking information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="h1 fw-bold mb-3">Ready to optimize your supply chain?</h2>
+                    <p class="lead mb-0">Discover how our warehousing solutions can help your business grow.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="/kgl-delivery-website/pages/contact/index.html" class="btn btn-light btn-lg w-100">
+                        <i class="fas fa-paper-plane me-2"></i> Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-component"></div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-lg back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/kgl-delivery-website/js/load-components.js"></script>
+    <script src="/kgl-delivery-website/js/main.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Back to top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Hide preloader when page is loaded
+            window.addEventListener('load', function() {
+                const preloader = document.querySelector('.preloader');
+                if (preloader) {
+                    preloader.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

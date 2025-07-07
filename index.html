@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KGL Express - Kano’s #1 Delivery Partner. Fast, secure, and reliable delivery services in Kano, with plans for nationwide expansion.">
+    <meta name="keywords" content="KGL Express, Kano Delivery, Logistics, Shipping, Package Delivery, Courier Services, Express Delivery, Same Day Delivery, Nigeria">
+    <meta name="author" content="KGL Express">
+    <meta property="og:title" content="KGL Express - Delivery Services">
+    <meta property="og:description" content="Fast, secure, and reliable delivery services. Track your package or book a delivery today.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:url" content="https://kglexpress.ng">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#FF6B00">
+    <title>KGL Express - Delivery Services</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Fonts & CSS Libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/components.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="js/components.js" as="script">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
+</head>
+<body class="d-flex flex-column min-vh-100" data-bs-theme="light">
+    <!-- Preloader -->
+    <div class="preloader" aria-label="Loading...">
+        <div class="preloader-logo">
+            <img src="https://via.placeholder.com/180x60?text=KGL+Express" alt="KGL Express logo" width="180" height="auto">
+            <div class="spinner" aria-hidden="true"></div>
+        </div>
+    </div>
+
+    <div id="alerts-container" aria-live="polite"></div>
+
+    <!-- =========================
+         Header Component (Loaded Dynamically)
+    ========================== -->
+    <div id="header-component">
+        <!-- Header will be loaded here -->
+    </div>
+    <!-- Hero Section -->    
+    <section class="hero-section" id="home">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container position-relative">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <span class="badge bg-primary-soft text-primary mb-3">Kano's #1 Delivery Partner</span>
+                    <h1 class="display-3 fw-bold mb-4">
+                        Fast, Secure & Reliable Delivery<br>
+                        <span class="text-primary">For Kano—And Beyond</span>
+                    </h1>
+                    <p class="lead mb-4">We're trusted by families, businesses, and communities across Kano to deliver what matters most. Nationwide service coming soon!</p>
+                    <div class="d-flex gap-3 mb-4">
+                        <a href="#tracking" class="btn btn-primary btn-lg px-4 shadow-lg">Track Your Parcel</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-4">See Our Services</a>
+                    </div>
+                    <div class="hero-stats mt-4">
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number text-primary fw-bold">10K+</div>
+                                    <div class="stat-label">Deliveries</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number text-primary fw-bold">50+</div>
+                                    <div class="stat-label">Cities</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number text-primary fw-bold">99%</div>
+                                    <div class="stat-label">On-time Delivery</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-4">
+                        <span class="text-success fw-semibold me-4"><i class="fas fa-shield-alt me-1"></i> 100% Delivery Guarantee</span>
+                        <span class="badge bg-info text-dark py-2 px-3">Expanding Nationwide in 2025!</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-image position-relative">
+                        <img src="images/hero-delivery.png" alt="Fast Delivery" class="img-fluid rounded-lg shadow-lg">
+                        <div class="floating-badge bg-primary text-white">
+                            <i class="fas fa-bolt"></i>
+                            <span>Fast & Secure</span>
+                        </div>
+                        <div class="floating-badge bg-success text-white">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Secure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Service cards would be here -->
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="/services" class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-boxes me-2"></i> View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Preview Section -->
+    <section id="tracking" class="tracking-preview section-padding bg-gradient-light-to-white position-relative">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-primary-soft text-primary px-3 py-2 mb-2">PACKAGE TRACKING</span>
+                <h2 class="section-title display-5 fw-bold">Track Your Shipment in Real-Time</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">Know exactly where your package is at every step of its journey</p>
+            </div>
+            
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="tracking-content pe-lg-4">
+                        <div class="tracking-features">
+                            <div class="feature-card bg-white rounded-4 shadow-sm p-4 mb-4 d-flex">
+                                <div class="feature-icon me-4">
+                                    <div class="icon-wrapper bg-primary-soft text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px">
+                                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="mb-2 fw-bold">Real-Time Location</h5>
+                                    <p class="mb-0 text-muted">Track your package's exact location on an interactive map with live updates.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card bg-white rounded-4 shadow-sm p-4 mb-4 d-flex">
+                                <div class="feature-icon me-4">
+                                    <div class="icon-wrapper bg-primary-soft text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px">
+                                        <i class="fas fa-bell fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="mb-2 fw-bold">Instant Notifications</h5>
+                                    <p class="mb-0 text-muted">Get alerts for all important updates and delivery status changes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card bg-white rounded-4 shadow-sm p-4 d-flex">
+                                <div class="feature-icon me-4">
+                                    <div class="icon-wrapper bg-primary-soft text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px">
+                                        <i class="fas fa-history fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="mb-2 fw-bold">Delivery History</h5>
+                                    <p class="mb-0 text-muted">Access complete history of all your shipments in one place.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="tracking-form-container">
+                        <div class="tracking-form bg-white rounded-4 shadow p-4 p-lg-5">
+                            <div class="mb-4 text-center text-lg-start">
+                                <h4 class="fw-bold mb-1">Track Your Package</h4>
+                                <p class="form-subtitle text-muted">Enter your tracking number to get started</p>
+                            </div>
+                            
+                            <form action="/tracking" method="GET" class="needs-validation" novalidate>
+                                <div class="input-group input-group-lg mb-3 shadow-sm rounded overflow-hidden">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="fas fa-search text-primary"></i>
+                                    </span>
+                                    <input type="text" class="form-control form-control-lg border-start-0 py-3" 
+                                           name="trackingNumber" placeholder="Enter your tracking number" required>
+                                    <button class="btn btn-primary px-4 px-lg-5" type="submit">
+                                        <span class="d-none d-md-inline fw-medium">Track Package</span>
+                                        <i class="fas fa-arrow-right ms-2 d-inline"></i>
+                                    </button>
+                                </div>
+                                <div class="form-text text-muted mb-4">
+                                    <i class="fas fa-info-circle me-1"></i> Enter your 12-digit tracking number (e.g., KGL1234567890)
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                                    <p class="mb-0">Don't have a tracking number?</p>
+                                    <a href="/contact" class="btn btn-outline-primary">
+                                        <i class="fas fa-headset me-2"></i> Contact Support
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="position-absolute d-none d-lg-block" style="bottom: 0; right: 5%; width: 150px; height: 150px; opacity: 0.05; z-index: 0;">
+            <i class="fas fa-box-open" style="font-size: 150px;"></i>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section id="about" class="about-preview section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="about-images">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="about-image-1 rounded-3 overflow-hidden">
+                                    <img src="/images/about-1.jpg" alt="About KGL Express" class="img-fluid w-100">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="about-image-2 rounded-3 overflow-hidden">
+                                    <img src="/images/about-2.jpg" alt="Our Team" class="img-fluid w-100">
+                                </div>
+                                <div class="experience-badge bg-primary text-white text-center p-3 rounded-3 shadow mt-3">
+                                    <h3 class="display-4 fw-bold mb-0">13+</h3>
+                                    <p class="mb-0 fw-medium">Years of Excellence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <span class="section-subtitle text-primary">ABOUT US</span>
+                    <h2 class="section-title display-5 fw-bold mb-4">Nigeria's Most Trusted Logistics Partner</h2>
+                    <p class="lead">With over a decade of experience, KGL Express has established itself as a leader in the logistics industry, delivering excellence across Nigeria.</p>
+                    
+                    <div class="about-features mt-4">
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <span class="icon-wrapper bg-primary-soft text-primary rounded-circle">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Professional Team</h5>
+                                <p class="mb-0 text-muted">Our team of experts is dedicated to providing exceptional service.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <span class="icon-wrapper bg-primary-soft text-primary rounded-circle">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Advanced Technology</h5>
+                                <p class="mb-0 text-muted">State-of-the-art tracking and logistics management systems.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <span class="icon-wrapper bg-primary-soft text-primary rounded-circle">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Customer Focus</h5>
+                                <p class="mb-0 text-muted">Your satisfaction is our top priority.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <a href="/about" class="btn btn-primary btn-lg me-3">Our Story</a>
+                        <a href="/contact" class="btn btn-outline-primary btn-lg">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview Section -->
+    <section id="contact" class="contact-preview section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle text-primary">GET IN TOUCH</span>
+                <h2 class="section-title display-5 fw-bold mb-4">We'd Love to Hear From You</h2>
+                <div class="section-divider">
+                    <span></span>
+                    <i class="fas fa-envelope"></i>
+                    <span></span>
+                </div>
+                <p class="section-description mx-auto mt-4">Have questions or need assistance? Our team is here to help you with all your logistics needs.</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card text-center p-4 rounded-3 h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Our Location</h4>
+                        <p class="text-muted mb-0">123 Business District, Kano, Nigeria</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card text-center p-4 rounded-3 h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-phone-alt fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Phone Number</h4>
+                        <p class="text-muted mb-2">+234 800 123 4567</p>
+                        <p class="text-muted mb-0">+234 800 765 4321</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-info-card text-center p-4 rounded-3 h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-envelope fa-2x text-primary"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Email Address</h4>
+                        <p class="text-muted mb-2">info@kgldelivery.com</p>
+                        <p class="text-muted mb-0">support@kgldelivery.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="/contact" class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-paper-plane me-2"></i> Send Us a Message
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section bg-primary text-white py-6">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Ship With Us?</h2>
+                    <p class="lead mb-0">Join thousands of satisfied customers who trust KGL Express for their logistics needs across Nigeria.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="/contact" class="btn btn-light btn-lg px-4">
+                        <i class="fas fa-paper-plane me-2"></i> Get a Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer is loaded dynamically via components.js -->
+
+    <!-- =========================
+         Footer Component (Loaded Dynamically)
+         ============================== -->
+    <div id="footer-component"></div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/load-components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.5/dist/lazyload.min.js"></script>
+    
+    <!-- Components JavaScript -->
+    <script src="js/components.js"></script>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Load components before main.js -->
+    <script src="js/load-components.js"></script>
+    <script src="js/main.js" type="module"></script>
+    
+    <!-- Performance Monitoring -->
+    <script>
+        // Initialize performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                const timing = performance.timing;
+                const pageLoadTime = timing.loadEventEnd - timing.navigationStart;
+                console.log(`Page loaded in ${pageLoadTime}ms`);
+                
+                // Send to analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'timing_complete', {
+                        'name': 'page_load',
+                        'value': pageLoadTime,
+                        'event_category': 'JS Dependencies'
+                    });
+                }
+            });
+        }
+        
+        // Initialize AOS with performance optimizations
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                    throttleDelay: 99,
+                    debounceDelay: 50
+                });
+            }
+            
+            // Initialize LazyLoad
+            const lazyLoadInstance = new LazyLoad({
+                elements_selector: ".lazy",
+                threshold: 200,
+                callback_loaded: (el) => {
+                    el.classList.add('lazy-loaded');
+                }
+            });
+        });
+    </script>
+    <!-- =========================
+         Footer Component (Loaded Dynamically)
+    ========================== -->
+    <div id="footer-component">
+        <!-- Footer will be loaded here -->
+    </div>
+</body>
+</html>
