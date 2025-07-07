@@ -1,0 +1,16 @@
+/* Fix for mobile scrolling issues */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Fix for potential issues with elements that might extend beyond viewport */
+img, video, iframe, table, .container-fluid, .row {
+    max-width: 100%;
+}
+
+/* Improve touch scrolling on iOS */
+* {
+    -webkit-overflow-scrolling: touch;
+}
